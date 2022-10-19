@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * main - function to print
- * is written by bwave
+ * is written by Chukwuka
  * Return 0
  */
 int main(void)
