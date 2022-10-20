@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - Prints all natural numbers from input to 98,
  * in order separated by a comma followed by a space.
