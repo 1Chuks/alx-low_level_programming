@@ -1,75 +1,41 @@
-#include<stdio.h>
+#include <stdio.h>
 
- 
+#include "main.h"
 
-int largestprimefactor(unsigned long a)
 
-{
 
-	    int i =2 ,largeprimefactor = 2;
+/**
+ *
+ *  * main - prints the largest prime factor of 612852475143
+ *
+ *   *
+ *
+ *    * Return: 0
+ *
+ *     */
 
-	         
 
-	        while(a!=1)
 
-			    {
-
-				            if(a%i==0)
-
-						            {
-
-								                while(a%i==0)
-
-											            {
-
-													                    a = a/i;
-
-															                     
-
-															                    printf("%d ",i);
-
-																	                     
-
-																	                    if(i>largeprimefactor)
-
-																				                    {
-
-																							                        largeprimefactor = i;
-
-																										                }
-
-																			                }
-
-										        } 
-
-					             
-
-					            i++;
-
-						        }
-
-		     
-
-		    return largeprimefactor;
-
-}
-
- 
-
-main()
+int main(void)
 
 {
 
-	    unsigned long inputnumber;
+		unsigned long int i, n = 612852475143;
 
-	         
 
-	        printf("Enter a number : ");
 
-		    scanf("%d",&inputnumber);
+			for (i = 3; i < 782849; i = i + 2)
 
-		         
+					{
 
-		        printf("\nThe largest prime factor of %d is %d",inputnumber,largestprimefactor(inputnumber));
+								while ((n % i == 0) && (n != i))
+
+												n = n / i;
+
+									}
+
+				printf("%lu\n", n);
+
+					return (0);
 
 }
