@@ -1,41 +1,51 @@
-#include "main.h"
+/*
+ *
+ *  * File: 3-strcmp.c
+ *
+ *   * Auth: Brennan D Baraban
+ *
+ *    */
+
+
+
+#include "holberton.h"
+
+
 
 /**
  *
- * _strncat - concatenates two strings
+ *  * _strcmp - Compares pointers to two strings.
  *
+ *   * @s1: A pointer to the first string to be compared.
  *
+ *    * @s2: A pointer to the second string to be compared.
  *
- * @src: The source of strings
+ *     *
  *
- * @dest: The destination of the string
+ *      * Return: If str1 < str2, the negative difference of the first unmatched characters.
  *
- * @n: The length of int
+ *       *         If str1 == str2, 0.
  *
+ *        *         If str1 > str2, the positive difference of the first unmatched characters.
  *
- *
- * Return: pointer to the resulting string dest
- *
- */
+ *         */
 
-char *_strncat(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 
 {
 
-	int i, j;
+		while (*s1 && *s2 && *s1 == *s2)
 
-	for (i = 0; dest[i] != '\0'; i++)
-	{
+				{
 
-		continue;
-	}
-	for (j = 0; src[j] != '\0' && j < n; j++)
-	{
+							s1++;
 
-		dest[i + j] = src[j];
+									s2++;
 
-        }
-		dest[i + j] = '\0';
-	return (dest);
+										}
+
+
+
+			return (*s1 - *s2);
 
 }
