@@ -1,53 +1,35 @@
-#include "main.h"
+#include "holberton.h"
 
 
 
 /**
  *
- *  * _strpbrk - Searches a string for any of a set of bytes.
+ *  * reverse_array - Reverses the content of an array of integers.
  *
- *   * @s: The string to be searched.
+ *   * @a: The array of integers to be reversed.
  *
- *    * @accept: The set of bytes to be searched for.
+ *    * @n: The number of elements in the array.
  *
- *     *
- *
- *      * Return: If a set is matched - a pointer to the matched byte.
- *
- *       *         If no set is matched - NULL.
- *
- *        */
+ *     */
 
-char *_strpbrk(char *s, char *accept)
+void reverse_array(int *a, int n)
 
 {
 
-		int index;
+		int tmp, index;
 
 
 
-			while (*s)
+			for (index = n - 1; index >= n / 2; index--)
 
 					{
 
-								for (index = 0; accept[index]; index++)
+								tmp = a[n - 1 - index];
 
-											{
+										a[n - 1 - index] = a[index];
 
-															if (*s == accept[index])
+												a[index] = tmp;
 
-																				return (s);
-
-																	}
-
-
-
-										s++;
-
-											}
-
-
-
-				return ('\0');
+													}
 
 }
