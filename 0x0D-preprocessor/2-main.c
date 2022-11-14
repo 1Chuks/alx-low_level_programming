@@ -1,21 +1,27 @@
 #include <stdio.h>
 
-#include <stdlib.h>
+
 
 /**
  *
- * * main - program
+ *  * main - Prints the name of the file of the program
  *
- * * Description: print name if file it was compiled from.
+ *   *        was compiled from, followed by a new line.
  *
- * * Return: Always 0
+ *    *
  *
- * */
+ *     * Return: Always 0.
+ *
+ *      */
 
 int main(void)
 
 {
-	printf("%s\n", __BASE_FILE__);
 
-	return (0);
+		printf("%s\n", __FILE__);
+
+
+
+			return (0);
+
 }
