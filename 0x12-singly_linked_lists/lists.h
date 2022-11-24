@@ -1,8 +1,24 @@
-@@ -0,0 +1,26 @@
+#ifndef LISTS_H
 
-#ifndef _LIST_
+#define LISTS_H
 
-#define _LIST_
+
+
+/*
+ *
+ *  * File: lists.h
+ *
+ *  * Desc: Header file containing prototypes and definitions for all functions
+ *
+ *     *       and types written in the 0x11-singly_linked_lists directory.
+ *
+ *      */
+
+
+
+#include <stdlib.h>
+
+
 
 /**
  *
@@ -18,7 +34,7 @@
  *
  *       * Description: singly linked list node structure
  *
- *        * for Holberton project
+ *        *              for Chukwuka project
  *
  *         */
 
@@ -34,7 +50,7 @@ typedef struct list_s
 
 } list_t;
 
-int _putchar(char c);
+
 
 size_t print_list(const list_t *h);
 
@@ -46,8 +62,6 @@ list_t *add_node_end(list_t **head, const char *str);
 
 void free_list(list_t *head);
 
-int _strlen(const char *s);
 
-void before_main(void)__attribute__((constructor));
 
-#endif
+#endif /* LISTS_H */
