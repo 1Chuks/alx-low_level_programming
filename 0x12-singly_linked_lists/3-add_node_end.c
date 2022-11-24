@@ -1,101 +1,107 @@
-#include <stdio.h>
+/*
+ *
+ *  * File: 3-add_node_end.c
+ *
+ *   * Auth: Brennan D Baraban
+ *
+ *    */
 
-#include <stdlib.h>
 
-#include <string.h>
 
 #include "lists.h"
+
+#include <string.h>
 
 
 
 /**
  *
- *  * add_node_end - Add new node in the end of the linked list.
+ *  * add_node_end - Adds a new node at the end
  *
- *   * @head: head of the linked list.
+ *   *                of a list_t list.
  *
- *    * @str: string to add.
+ *    * @head: A pointer the head of the list_t list.
  *
- *     *
+ *     * @str: The string to be added to the list_t list.
  *
- *      * Return: pointer of the new node added to linked list.
+ *      *
  *
- *       */
-
-
+ *       * Return: If the function fails - NULL.
+ *
+ *        *         Otherwise - the address of the new element.
+ *
+ *         */
 
 list_t *add_node_end(list_t **head, const char *str)
 
 {
 
-		list_t *new;
+		char *dup;
 
-			list_t *temp;
+			int len;
 
-
-
-				new = malloc(sizeof(list_t));
-
-					if (!new)
-
-								return (NULL);
-
-						temp = *head;
-
-							new->str = strdup(str);
-
-								new->len = _strlen(str);
-
-									new->next = NULL;
-
-										if (*head == NULL)
-
-												{
-
-															*head = new;
-
-																	return (new);
-
-																		}
-
-											while (temp->next != NULL)
-
-														temp = temp->next;
-
-												temp->next = new;
-
-													return (new);
-
-}
+				list_t *new, *last;
 
 
 
-/**
- *
- *  * _strlen - Calculate lenght of a string.
- *
- *   * @s: string.
- *
- *    *
- *
- *     * Return: lenght of the string s.
- *
- *      */
+					new = malloc(sizeof(list_t));
+
+						if (new == NULL)
+
+									return (NULL);
 
 
 
-int _strlen(const char *s)
+							dup = strdup(str);
 
-{
+								if (str == NULL)
 
-		int idx = 0;
+										{
+
+													free(new);
+
+															return (NULL);
+
+																}
 
 
 
-			for (; s[idx]; idx++)
+									for (len = 0; str[len];)
 
-					;
+												len++;
 
-				return (idx);
+
+
+										new->str = dup;
+
+											new->len = len;
+
+												new->next = NULL;
+
+
+
+													if (*head == NULL)
+
+																*head = new;
+
+
+
+														else
+
+																{
+
+																			last = *head;
+
+																					while (last->next != NULL)
+
+																									last = last->next;
+
+																							last->next = new;
+
+																								}
+
+
+
+															return (*head);
 
 }
