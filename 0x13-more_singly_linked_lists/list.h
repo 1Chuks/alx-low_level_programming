@@ -4,7 +4,18 @@
 
 
 
-#include <stdio.h>
+/*
+ *
+ *  * File: lists.h
+ *
+ *   * Auth: Chukwuka Oraegbunam
+ *    * Desc: Header file containing prototypes and definitions for all functions
+ *
+ *     *       and types written in the 0x12-more_singly_linked_lists directory.
+ *
+ *      */
+
+
 
 #include <stdlib.h>
 
@@ -22,17 +33,15 @@
  *
  *      * Description: singly linked list node structure
  *
- *       * for Holberton project
- *
- *        */
+ */
 
 typedef struct listint_s
 
 {
 
-	    int n;
+		int n;
 
-	        struct listint_s *next;
+			struct listint_s *next;
 
 } listint_t;
 
@@ -70,4 +79,4 @@ listint_t *find_listint_loop(listint_t *head);
 
 
 
-#endif
+#endif /* LISTS_H */
