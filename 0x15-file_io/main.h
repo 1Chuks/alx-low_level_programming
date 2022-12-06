@@ -1,26 +1,31 @@
-@@ -0,0 +1,16 @@
+#ifndef main.h
 
-#ifndef MAIN_H
-
-#define MAIN_H
+#define main.h
 
 
 
-#include <unistd.h>
+/*
+ *
+ *  * File: main.h
+ *
+ *   * Auth: Chukwuka 
+ *    * Desc: Header file containing prototypes for all functions
+ *
+ *     *       written in the 0x14-file_io directory.
+ *
+ *      */
+
+
+
+#include <sys/types.h>
+
+#include <sys/stat.h>
 
 #include <fcntl.h>
 
-#include <stdlib.h>
-
-#include <stdio.h>
+#include <unistd.h>
 
 
-
-#define READ_BUF_SIZE 1024
-
-
-
-int _putchar(char c);
 
 ssize_t read_textfile(const char *filename, size_t letters);
 
