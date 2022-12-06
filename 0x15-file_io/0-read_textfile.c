@@ -2,13 +2,13 @@
  *
  *  * File: 0-read_textfile.c
  *
- *   * Auth: Chukwuka
+ *   * Auth: Brennan D Baraban
  *
  *    */
 
 
 
-#include "main.h"
+#include "holberton.h"
 
 #include <stdlib.h>
 
